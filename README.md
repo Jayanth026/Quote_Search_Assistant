@@ -82,16 +82,19 @@ Model: google/flan-t5-base
 - Also used for binary relevance classification (prompt: "Is this quote relevant to the query?")
 
 ## Evaluation
-- Metric	Score
-- Precision	1.00
-- Recall	0.50
-- F1 Score	0.67
+    Metric   -   Score
+    Precision   -   0.25
+    Recall   -   0.50
+    F1 Score   -    0.33
+    Accuracy   -   0.50
 
-- Evaluation done on manually labeled mini dataset using FLAN-T5
+Evaluation done on a manually labeled mini dataset using FLAN-T5
 
-- Showed strong precision, indicating high confidence in relevant quotes
+Model correctly identified one relevant quote, but missed the irrelevant one
 
-- Lower recall due to small sample size and edge-case queries
+Low precision and F1 due to extremely small sample size (only 2 examples)
+
+Results are not reliable yet and highlight the need for a larger, balanced test set
 
 ## Streamlit App
 To run the app locally:
